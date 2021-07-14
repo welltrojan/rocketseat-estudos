@@ -1,5 +1,4 @@
 const path = require('path')
-const HHMLWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -8,6 +7,9 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname, 'public')
     },
     resolve: {
         extensions: ['.js', '.jsx'],
