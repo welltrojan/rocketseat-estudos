@@ -4,12 +4,6 @@ import { useState, useEffect } from "react";
 
 const repositoryName = 'Lista de Repositórios';
 
-const repository = {
-    name: 'Nome Rep',
-    description: 'Lorem Ipsum',
-    link: 'https://github.com/welltrojan'
-}
-
 export function RepositoryList() {
     const [repositories, setRepositories] = useState([]);
 
@@ -23,9 +17,9 @@ export function RepositoryList() {
         <section className="repository-list">
             <h1>{repositoryName}</h1>
             <ul>
-                <RepositoryItem repository={repository} />
-                <RepositoryItem repository={repository} />
-                <RepositoryItem repository={repository} />
+                {repositories.map(repository => {
+                    return <RepositoryItem key={repository.name} repository={repository} />
+                })}
             </ul>
         </section>
     )
