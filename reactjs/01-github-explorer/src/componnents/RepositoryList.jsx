@@ -1,6 +1,7 @@
 import { RepositoryItem } from "./RepositoryItem";
-import '../styles/repositories.sass'
 import { useState, useEffect } from "react";
+
+import '../styles/repositories.sass'
 
 const repositoryName = 'Lista de Repositórios';
 
